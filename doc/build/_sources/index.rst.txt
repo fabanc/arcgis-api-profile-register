@@ -11,12 +11,10 @@ Welcome to arcgis-api-profile-register's documentation!
    :caption: Contents:
 
 
-
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 
