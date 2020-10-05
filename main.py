@@ -22,6 +22,7 @@ def check_if_profile_exists(profile):
         return False
     return True
 
+
 def register_profile(portal_url, profile, user_name, password):
     gis = GIS(
         url=portal_url,
