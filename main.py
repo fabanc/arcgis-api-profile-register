@@ -56,14 +56,14 @@ if __name__ == '__main__':
     print('The profile that will be saved in your Windows Profile Manager is: {}'.format(profile))
 
     # Check if the profile already exist. If yes, the user is given the option to alter it, or exit the program.
-    profile_exists = check_if_profile_exists(profile)
-    if profile_exists:
-        confirm = None
-        while confirm is None or confirm.lower() not in ['y', 'n']:
-            confirm = input('The user profile already exists. Do you want to overwrite it? '
-                            'Type Y to continue and update the existing profile, N to exit')
-        if confirm.lower() == 'n':
-            sys.exit(0)
+    # profile_exists = check_if_profile_exists(profile)
+    # if profile_exists:
+    #     confirm = None
+    #     while confirm is None or confirm.lower() not in ['y', 'n']:
+    #         confirm = input('The user profile already exists. Do you want to overwrite it? '
+    #                         'Type Y to continue and update the existing profile, N to exit')
+    #     if confirm.lower() == 'n':
+    #         sys.exit(0)
 
     # If the profile does not exist, or need to be updated, let's get the credentials.
     portal_user_name = input('Type the ArcGIS Online / Portal user name that will be linked to this profile: ')
