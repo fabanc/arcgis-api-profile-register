@@ -77,6 +77,7 @@
 <li><a class="reference internal" href="#">Welcome to arcgis-api-profile-register’s documentation!</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#workaround-for-this-tool">Workaround for this tool</a></li>
 </ul>
 
         
@@ -153,6 +154,17 @@
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">profile</span><span class="o">=</span><span class="s1">&#39;fancelin_esrica_agol_profile&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="workaround-for-this-tool">
+<h1>Workaround for this tool<a class="headerlink" href="#workaround-for-this-tool" title="Permalink to this headline">¶</a></h1>
+<p>This tool achieves the same thing than running the following lineS in ArcGIS Pro or Jupyter Notebook. If that’s where you the most comfortable, go for it.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;myportalurl&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;myusername&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;mypassword&#39;</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s1">&#39;myprofilename&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>To open the Python console in ArcGIS Pro go to ArcGIS Pro’s menu, go to View, and the Python console.</p>
+<img alt="_images/arcgis-pro-python-console.png" src="_images/arcgis-pro-python-console.png" />
 </div>
 
 

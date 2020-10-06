@@ -29,6 +29,22 @@ You can then use that login in your application, without having to type your cre
    gis = GIS(profile='fancelin_esrica_agol_profile')
 ```
 
+# Workaround for this tool
+
+This tool achieves the same thing than running the following lines in ArcGIS Pro or Jupyter Notebook. If that's where you the most comfortable, go for it.
+
+```python
+from arcgis.gis import *
+gis = GIS(url='myportalurl', username='myusername', password='mypassword', profile='myprofilename')
+```
+
+To open the Python console in ArcGIS Pro go to ArcGIS Pro's menu, go to View, and the Python console.
+
+![GitHub Logo](doc/source/images/arcgis-pro-python-console.png)
+
+
+For more information about how to store credentials locally, please refer to the API documentation: https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/#Storing-your-credentials-locally
+
 # Requirements
 
 ## Anaconda / ArcGIS Pro requirement
