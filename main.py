@@ -40,6 +40,14 @@ def register_profile(portal_url, profile, user_name, password):
     return gis.users.me
 
 
+def no_null_input(text):
+    output = input(text)
+    if output is None or output == '':
+        print('Null values are not tolerated. The program will exit.')
+        sys.exit(1)
+    return output
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
@@ -48,11 +56,11 @@ if __name__ == '__main__':
     print('A local profile can be used to avoid storing your ArcGIS Online / Portal credentials in clear text')
 
     # Prompt for the ArcGIS Online / Portal for ArcGIS URL
-    portal_url = input('Type the URL of your ArcGIS Online / Portal organization: ')
+    portal_url = no_null_input('Type the URL of your ArcGIS Online / Portal organization: ')
     print('Your ArcGIS Portal Organization is: {}'.format(portal_url))
 
     # Prompt for the user profile to be created.
-    profile = input('Type the name of the profile that will be saved in your profile manager: ')
+    profile = no_null_input('Type the name of the profile that will be saved in your profile manager: ')
     print('The profile that will be saved in your Windows Profile Manager is: {}'.format(profile))
 
     # Check if the profile already exist. If yes, the user is given the option to alter it, or exit the program.
@@ -66,10 +74,14 @@ if __name__ == '__main__':
     #         sys.exit(0)
 
     # If the profile does not exist, or need to be updated, let's get the credentials.
-    portal_user_name = input('Type the ArcGIS Online / Portal user name that will be linked to this profile: ')
+    portal_user_name = no_null_input('Type the ArcGIS Online / Portal user name that will be linked to this profile: ')
     portal_password = getpass(
         prompt='Type the password associated with user {}:'.format(portal_user_name)
     )
+
+    if portal_password is None or portal_password == '':
+        print('The password cannot be null. The program will exit.')
+        sys.exit(1)
 
     # Store the new credentials under the profile.
     print('Storing you user name and password in your Windows Credential Manager under the profile: {}'.format(profile))
